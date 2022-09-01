@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Sample {
+
+	Scanner sc=new Scanner(System.in);
+	void input()
+	{
+		
+	}
+	void display()
+	{
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
