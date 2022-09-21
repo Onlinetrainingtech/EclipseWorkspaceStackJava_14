@@ -1,16 +1,18 @@
 class B
 {
 	String pname="mobile";
-	void get1()
+	int pid=1001;
+	 void get1()
 	{
-		System.out.println("This is Base Class");
+		System.out.println("This is Base Class"+pid);
 	}
 }
 class D extends B
 {
 	void get2()
 	{
-		System.out.println("This is Der Class"+pname);
+		int pid=2001;
+		System.out.println("This is Der Class"+pname+""+super.pid);
 	}
 }
 
