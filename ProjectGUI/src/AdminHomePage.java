@@ -4,10 +4,9 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
-import java.awt.Font;
 import javax.swing.JButton;
 
-public class HomePage extends JFrame {
+public class AdminHomePage extends JFrame {
 
 	private JPanel contentPane;
 
@@ -18,7 +17,7 @@ public class HomePage extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					HomePage frame = new HomePage();
+					AdminHomePage frame = new AdminHomePage();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -30,7 +29,7 @@ public class HomePage extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public HomePage() {
+	public AdminHomePage() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
@@ -39,21 +38,17 @@ public class HomePage extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("HR SYSTEM");
-		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 14));
-		lblNewLabel.setBounds(182, 28, 117, 21);
+		JLabel lblNewLabel = new JLabel("AdminHomePage");
+		lblNewLabel.setBounds(165, 11, 103, 19);
 		contentPane.add(lblNewLabel);
 		
-		JButton btnNewButton = new JButton("AdminLogin");
-		btnNewButton.setBounds(182, 76, 89, 23);
+		JButton btnNewButton = new JButton("AddProduct");
+		btnNewButton.setBounds(153, 60, 89, 23);
 		contentPane.add(btnNewButton);
 		
-		JButton btnNewButton_1 = new JButton("UserLogin");
-		btnNewButton_1.setBounds(182, 131, 89, 23);
+		JButton btnNewButton_1 = new JButton("AddStaff");
+		btnNewButton_1.setBounds(153, 127, 89, 23);
 		contentPane.add(btnNewButton_1);
-		
-		JButton btnNewButton_2 = new JButton("Register");
-		btnNewButton_2.setBounds(182, 194, 89, 23);
-		contentPane.add(btnNewButton_2);
 	}
+
 }
