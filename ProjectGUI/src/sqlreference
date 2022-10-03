@@ -1,0 +1,5 @@
+create table admin(adminname varchar(60),adminpass varchar(50))
+
+insert into admin values('admin','admin')
+
+select * from admin
