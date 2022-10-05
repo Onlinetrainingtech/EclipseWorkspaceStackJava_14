@@ -3,3 +3,10 @@ create table admin(adminname varchar(60),adminpass varchar(50))
 insert into admin values('admin','admin')
 
 select * from admin
+
+create table addproduct(productid varchar(100),productname varchar(100),quantity varchar(100))
+
+
+select * from addproduct
+
+

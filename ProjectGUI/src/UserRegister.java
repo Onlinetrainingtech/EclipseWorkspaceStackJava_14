@@ -4,8 +4,15 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.awt.event.ActionEvent;
 
 public class UserRegister extends JFrame {
 
@@ -73,7 +80,32 @@ public class UserRegister extends JFrame {
 		contentPane.add(textField_2);
 		textField_2.setColumns(10);
 		
-		JButton btnNewButton = new JButton("Register");
+		final JButton btnNewButton = new JButton("Register");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) 
+			{
+				try
+				{
+					int userid=Integer.parseInt(textField.getText());
+					String username=textField_1.getText();
+					String emailid=textField_2.getText();
+					String str1="insert into userreg values('"+userid+"','"+username+"','"+emailid+"')";
+					Class.forName("org.h2.Driver");
+					Connection conn=DriverManager.getConnection("jdbc:h2:tcp://localhost/~/javab14","sa","");
+					Statement stmt=conn.createStatement();
+					stmt.executeUpdate(str1);
+					JOptionPane.showMessageDialog(btnNewButton,"AddRegData...");
+				}
+				catch(ClassNotFoundException t)
+				{
+					System.out.println(t);
+				}
+				catch(SQLException t1)
+				{
+					System.out.println(t1);
+				}
+			}
+		});
 		btnNewButton.setBounds(82, 227, 89, 23);
 		contentPane.add(btnNewButton);
 		

@@ -5,10 +5,8 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JButton;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
-public class AdminHomePage extends JFrame {
+public class UserHomePage extends JFrame {
 
 	private JPanel contentPane;
 
@@ -19,7 +17,7 @@ public class AdminHomePage extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					AdminHomePage frame = new AdminHomePage();
+					UserHomePage frame = new UserHomePage();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -31,7 +29,7 @@ public class AdminHomePage extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public AdminHomePage() {
+	public UserHomePage() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
@@ -40,23 +38,12 @@ public class AdminHomePage extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("AdminHomePage");
-		lblNewLabel.setBounds(165, 11, 103, 19);
+		JLabel lblNewLabel = new JLabel("UserHomePage");
+		lblNewLabel.setBounds(154, 37, 102, 20);
 		contentPane.add(lblNewLabel);
 		
-		JButton btnNewButton = new JButton("AddProduct");
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) 
-			{
-				new AddProduct().setVisible(true);
-			}
-		});
-		btnNewButton.setBounds(153, 60, 89, 23);
+		JButton btnNewButton = new JButton("MyProfile");
+		btnNewButton.setBounds(154, 104, 89, 23);
 		contentPane.add(btnNewButton);
-		
-		JButton btnNewButton_1 = new JButton("AddStaff");
-		btnNewButton_1.setBounds(153, 127, 89, 23);
-		contentPane.add(btnNewButton_1);
 	}
-
 }
